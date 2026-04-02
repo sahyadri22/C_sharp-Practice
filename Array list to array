@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+//using System.Linq;
+namespace Hello{
+  class Program
+  {
+    static void Main()
+    {
+      
+ArrayList even = new ArrayList(){1,2,3,"apple",4};
+object [] num=even.ToArray();
+foreach( var el in num)
+{
+  Console.WriteLine(el);
+}
+    }
+  }
+}

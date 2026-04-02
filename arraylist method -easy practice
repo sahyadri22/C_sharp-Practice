@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      ArrayList data= new ArrayList();
+      
+      for (int i=0;i<=4;i++)//instead of manually adding each element we used for loop :method practiced:ADDING ELEMENT//
+    {
+      Console.WriteLine("enter data for "+i+" position of array list:");
+      data.Add(Console.ReadLine());
+      
+    }
+    foreach(var el in data)//printed whole arraylist 
+    {
+    Console.WriteLine(el);
+    }
+    Console.WriteLine("3rd element of ArrayList is:"+data[2]);//here we learned how to access element//
+    data[3]=20;//we overwrite the previous value of element in order to change it//
+   Console.WriteLine(data[3]);
+    Console.WriteLine("total no of elements in data:"+data.Count);//we used COUNT to know total no of element //
+    Console.WriteLine(data.Contains(10));//we used Contains() method to know if a paticular element exist in our array list//
+    
+    }
+  }
+}

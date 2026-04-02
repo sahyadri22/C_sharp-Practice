@@ -1,0 +1,17 @@
+using System;
+namespace Hello
+{
+  class Program
+  {
+    static int MyMethod(int a=2,int b=10)
+    {
+      return a*b;
+    }
+    static void Main(string[]args)
+    {
+      int x=MyMethod(33,5);
+      Console.WriteLine(x);
+      Console.WriteLine(MyMethod());
+    }
+  }
+}

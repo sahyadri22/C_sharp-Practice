@@ -1,0 +1,36 @@
+using System;
+using System.Collections;
+
+namespace HelloWorld
+{
+	public class Program
+	{
+		static void Main()
+		{
+		 ArrayList data= new ArrayList();
+		 data.Add(10);
+		 data.Add("yes");
+		 data.Insert(1,3.14);
+		 
+		
+			foreach (var el in data)
+		{Console.WriteLine(el);
+		}
+		data.Reverse();
+		
+	Console.WriteLine();
+		
+			foreach (var el in data)
+		{Console.WriteLine(el);
+		}
+		data[1]="morning";
+		Console.WriteLine(data[1]);
+		Console.WriteLine("total no of elements:"+data.Count);
+			
+			foreach (var el in data)
+		{Console.WriteLine(el);
+		}
+		
+}
+	}
+}
