@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    
+  {
+    List<int>num=new List<int>();//we crreated a list because we cant save duplicate elements in hashset so in order to remove duplicate need a list)
+    for(int i=0;i<10;i++)
+    {
+      Console.WriteLine("enter a number:");
+      num.Add(Convert.ToInt32(Console.ReadLine()));
+    }
+    Console.WriteLine("list:");
+    foreach(var el in num)
+    {
+      Console.WriteLine(el);
+    }
+    Console.WriteLine();
+    Console.WriteLine("HashSet with unique elements is:");//used the same list on HashSet to duplicates are deleted//
+    HashSet<int>uniqueNum=new HashSet<int>(num);
+    
+    foreach(var a in uniqueNum)//print the  hashset unnique values//
+    {
+      Console.WriteLine(a);
+    }
+    Console.WriteLine("enter a number to check:");//taking an inout from user to check if that number exist in the set//
+    int n=Convert.ToInt32(Console.ReadLine());
+    if(uniqueNum.Contains(n))//we use contain method to choose if the set contain that element//
+    {
+      Console.WriteLine("exists");
+    }
+    else
+    {
+      Console.WriteLine("does not exist");
+    }
+  }
+  }
+}

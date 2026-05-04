@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      HashSet <int> num1= new HashSet<int>(){1,2,3,4,5,6};
+      HashSet <int> num2= new HashSet<int>(){4,5,6,7,8};
+      num1.UnionWith(num2);
+      foreach( int el in num1)
+      {
+        Console.WriteLine(el);
+      }
+      num1.IntersectWith(num2);
+      
+      Console.WriteLine("Intersection of both sets:");
+      foreach( int el in num1)
+      {
+        Console.WriteLine(el);
+      }
+      Console.WriteLine(" num1 is subset of num2:"+num1.IsSubsetOf(num2));
+      Console.WriteLine("num2 is superset of num1:"+num2.IsSupersetOf(num1));
+    
+      foreach(int el in num1)
+      {
+        Console.WriteLine(el);
+      }
+    }
+  }
+}
+

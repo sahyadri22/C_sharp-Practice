@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  class Program
+ {
+   static void Main()
+   {
+     Console.WriteLine("Enter a sentence");
+     string line=Console.ReadLine();
+     
+     string[]words=line.Split(" ");
+     foreach(string w in words )
+     {
+       Console.WriteLine(w);
+     }
+     
+     HashSet<string> uniqueWords= new HashSet<string>(words);
+     Console.WriteLine("Number of Unique words in the sentence are:"+uniqueWords.Count);
+     
+   }
+ }
+}

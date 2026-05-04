@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      HashSet<int>num =new HashSet<int>(){1,2,3,4,5};
+      List<int> even =new List<int>();
+      foreach (int el in num)
+      {
+        if (el%2==0)/*here i tried to remove the even no directly from hash set using remove but we cant 
+                        delete or add element in the same collection while foreach is working on it*/
+        {
+          even.Add(el);//so we added it to other list called even//
+        }
+      }
+      foreach (int e in even)
+      {
+        num.Remove(e);/*then we used for loop on even now we arent having set loop
+                        going through for each so now we can remove elements from even from the set */
+      }
+      foreach (var no in num)
+      {
+        Console.WriteLine(no);
+      }
+    }
+  }
+}  
+  
