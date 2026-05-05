@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      List<int> numbers =new List<int>();
+      for(int i=1;i<=10;i++)//here we added elements in list using for loop instead of using Add. 10 times//
+      {
+        Console.WriteLine("enter a number");
+        numbers.Add(Convert.ToInt32(Console.ReadLine()));
+      }
+      foreach (var el in  numbers)//here we printed all elements in list//
+      {
+        Console.WriteLine(el);
+        
+      }
+         int len=numbers.Count;
+         int max=numbers[0];
+        for(int j=0;j<len;j++)//we used for loop to find max element in list//
+        {
+          if(max <numbers[j])
+          {
+            max=numbers[j];
+          }
+        }
+        Console.WriteLine("max number in list id:"+max);
+        numbers.Sort();//used Sort Method to sort the elements in list in ascending order//
+        foreach(var el in numbers)
+        {
+          Console.WriteLine(el);
+        }
+        numbers.Reverse();//we used reversed method to reverse the whole list//
+        foreach(var el in numbers)
+        {
+          Console.WriteLine(el);
+          
+        }
+        for(int k=0;k<numbers.Count;k++)//we removed duplicate elements using for loop and if loop)
+        {
+          for (int a=k+1;a<numbers.Count;a++)
+          {
+            if (numbers[k]==numbers[a])
+            {
+              numbers.RemoveAt(a);
+              a--;
+            }
+          }
+        }
+        foreach(var el in numbers)
+        {
+          Console.WriteLine(el);
+        }
+        
+        
+    }
+  }
+        
+}
