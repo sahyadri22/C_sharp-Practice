@@ -1,0 +1,34 @@
+using System;
+using System.Collections;
+using System.Linq;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      int[]num={12,94,43,53,2,4};
+      //find second largest number
+      
+      Array.Sort(num);
+      int len =num.Length-1;
+      foreach(int el in num)
+      {
+        if(el==num[len-1])
+        {
+          Console.WriteLine("second largest element in array is:"+el);
+        }
+      }
+      //check if array is sorted 
+      int[]asc=num.ToArray();
+      if(asc.SequenceEqual(num))
+      {
+        Console.WriteLine("Array sorted");
+      }
+      else
+      {
+        Console.WriteLine("not sorrted");
+      }
+    }
+  }
+}
