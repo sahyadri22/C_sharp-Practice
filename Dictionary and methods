@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      Dictionary <int,string> students= new Dictionary <int,string>()//create an dictionary//
+      {{1,"Ram"},{2,"Sita"},{3,"Roy"}//given data//
+        
+      };
+      foreach (var el in students)
+      {
+        Console.WriteLine(el.Key+" "+el.Value);//printed data  from dictionary//
+      }
+      foreach(var k in students.Keys)//print only keys//
+      {
+        Console.WriteLine(k);
+      }
+      foreach(var v in students.Values)//print only values//
+      {
+        Console.WriteLine(v);
+      }
+        students.Add(4,"Sun");//added values using Add() method//
+        students.Add(5,"Eve");
+       
+      foreach(var el in students )
+      {
+        Console.WriteLine(el.Key+" "+el.Value);
+      }
+      students.Remove(3);//removed values using Removed() method//
+      foreach(var el in students)
+      {
+        Console.WriteLine(el.Key+" "+el.Value);
+      }
+      Console.WriteLine(students.ContainsKey(22));
+      Console.WriteLine(students.ContainsValue("Ram"));
+      students[2]="Yes"; // assigned new value for already existing key//
+      foreach (var el in students)
+      {
+        Console.WriteLine(el.Key+" "+el.Value); //printed the updated dictionary//
+      }
+    }
+  }
+}

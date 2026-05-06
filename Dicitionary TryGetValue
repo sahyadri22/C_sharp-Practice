@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  class Program
+  {
+    static void Main()
+    {
+      Dictionary <string,string> students= new Dictionary<string,string> ();
+      students.Add("color","yellow");
+      students.Add("name","Sayee");
+      students.Add("flower","sunflower");
+      string pair;
+      if(students.TryGetValue("color",out pair))// used TryGetValue method for finding value of any key//
+      {
+        Console.WriteLine("name="+pair);
+        
+      }
+      else 
+      {
+        Console.WriteLine("pair not found");
+      }
+      Console.WriteLine("enter a value");
+      string searchvalue =Console.ReadLine();/*the way we have Try GetValue we do not have a predefined method for findindey so we have to use this way*/
+      /* findinf key so we have to use thid method*/
+      {
+        if(searchvalue==k.Value)
+        {
+          Console.WriteLine(searchvalue+"="+k.Key);
+        }
+        
+      }
+    }
+  }
+}

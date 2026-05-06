@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+namespace Hello
+{
+  public class Program
+  {
+    static void Main()
+    {
+      Dictionary<int,string> students=new Dictionary<int,string>();
+      students.Add(1,"Pogo");
+      students.Add(2,"Ajay");
+      students.Add(3,"Cow");
+      foreach( var el in students)
+      {
+        Console.WriteLine(el.Key+"="+el.Value);
+      }
+      foreach(var v in students.Values)
+      {
+        Console.WriteLine(v);
+      }
+      foreach(var k in students.Keys)
+      {
+        Console.WriteLine(k);
+      }
+      Console.WriteLine(students[3]);
+      students[3]="Morning";
+      Console.WriteLine(students[2]);
+    }
+      
+  }
+}
