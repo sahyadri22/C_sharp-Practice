@@ -1,0 +1,22 @@
+using System;
+namespace Program
+{
+ class Car
+ {
+  string color;
+  int maxSpeed;
+  static void Main(string [] args)
+  {
+   Car  oldModel= new Car();
+   oldModel.color="red";
+   oldModel.maxSpeed=200;
+   
+   Car newModel= new Car();
+   newModel.color="blue";
+   newModel.maxSpeed=500;
+  
+  Console.WriteLine("max speed of old car is :"+ oldModel.maxSpeed);
+   Console.WriteLine("max speed of new car is :"+ newModel.maxSpeed);
+   }
+ }   
+   }

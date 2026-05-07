@@ -1,0 +1,27 @@
+ using System;
+namespace Program
+{
+class Car
+{
+ public string model;
+ public Car()
+ {
+  if (model==null)
+  {
+   model="unknown";
+ }
+ }
+ }
+ class Data
+ {
+  static void Main(string[]args)
+  {
+   Car swift= new Car();
+   swift.model="desire";
+   Car audi =new Car();
+   Console.WriteLine(audi.model);
+   Console.WriteLine(swift.model);
+   }
+   }
+   }
+   

@@ -1,0 +1,33 @@
+using System;
+namespace Program
+{
+  class BankAccount
+  {
+    public int AccountName
+      {get;set;}
+  
+    public int Balance
+    {
+      get;set;
+    }
+    
+    public BankAccount(int AN=2208,int B=2000)
+    {
+      AccountName= AN;
+      Balance= B;
+    }
+    public void Display()
+    {
+      Console.WriteLine("User's account name is "+ AccountName +" with balance of rupees "+Balance);
+      
+    }
+    }
+    class application{
+      static void Main(string[]args)
+      {
+        BankAccount no1= new BankAccount();
+        no1.Display();
+      
+      }
+    }
+}
