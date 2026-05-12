@@ -1,0 +1,30 @@
+
+using System;
+namespace Program
+{
+  class Person
+  {
+    private string name="Pogo";
+    
+    public string Name
+    {
+      get{
+        return name;
+      }
+      set
+      {
+        name= value;
+      }
+      
+    }
+  }
+  class Application
+  {
+    static void Main(string[]args)
+    {
+    Person myObj = new Person();
+   
+    Console.WriteLine("Object's name is "+ myObj.Name);
+  }
+}
+}
