@@ -1,0 +1,51 @@
+/*Question 1 – Student Class
+Properties: Name (string), Age (int > 0), Marks (0–100)
+Use full get/set with validation
+Initialize values inside the constructor*/
+using System;
+namespace Program
+{
+  class Student
+  {
+    private string name ;
+    private int age;
+    private int marks;
+      
+    public Student(string Name,int Age,int Marks)
+    {
+      name=Name;
+      age=Age;
+      marks=Marks;
+    }
+    
+    public string Name 
+    { get{return name;}
+      set{name=value;}
+    }
+    public int Age{
+      get{return age;}
+      set{age= value;}
+    }
+    public int Marks{
+      get{return marks;}
+      set{marks=value;}
+    }
+    
+    public void Display()
+    {
+      Console.WriteLine("students name is "+Name+" age is "+Age+" and marks are "+Marks);
+    }
+  
+  }
+  class Application 
+  {
+    static void Main(string []args)
+    {
+    Student obj1= new Student("Pogo",28,99);
+    Student obj2= new Student("Veer",15,97);
+    obj1.Display();
+    obj2.Display();
+  }
+}
+  
+}
